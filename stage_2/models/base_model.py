@@ -36,6 +36,8 @@ class AllBaseModel(SQLModel):
         new_dict["created_at"] = self.created_at.strftime(TIME)
         new_dict["updated_at"] = self.updated_at.strftime(TIME)
         new_dict["__class__"] = self.__class__.__name__
+        if "_sa_instance_state" in new_dict:
+            del new_dict["_sa_instance_state"]
         return new_dict
 
     def delete(self):

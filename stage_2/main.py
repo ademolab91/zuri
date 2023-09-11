@@ -72,7 +72,6 @@ def get_person(person: PersonIn) -> PersonOut:
 
     person = parse_name(person)
     person: Person = models.storage.get(Person, person.name)
-    print(person)
     if not person:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
     return person
