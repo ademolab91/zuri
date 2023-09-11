@@ -2,6 +2,8 @@
 
 A simple REST API capable of CRUD operations on a resource, say in this case, a "person".
 
+Use the service here: [https://stage-2.onrender.com/docs#/](https://stage-2.onrender.com/docs#/)
+
 See the [https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view?usp=drivesdk](UML Diagram)
 
 ## Setup Instructions
@@ -16,3 +18,7 @@ Make sure you have [https://python-poetry.org](poetry) installed before going on
 ## Usage
 
 See [https://github.com/ademolab91/zuri/blob/main/stage_2/DOCUMENTATION.md](DOCUMENTATION.md)
+
+## Testing
+
+To test the endpoint, run `pytest tests/test_person.py`

@@ -1,23 +1,34 @@
-import models
-from models.person import Person
+import requests
 
 
-def create_person():
-    """Return the instance of a string representation of a person
+def test_person():
+    """Test Person"""
 
-    >>> person = Person(id=id, name="Mark Essien")
-    >>> person.save()
-    >>> db_person = models.storage.get(Person, person.name)
-    >>> person.id == db_person.id
-    True
+    url = "https://stage-2.onrender.com"
 
-    """
-    pass
+    # Test add person
+    person = {"name": "  john doe  "}
+    response = requests.post(f"{url}/add", json=person)
+    assert response.status_code == 201
+    assert response.json()["name"] == "John Doe"
+
+    # Test get person by name
+    response = requests.get(f"{url}/read", json={"name": "John Doe"})
+    assert response.status_code == 200
+    assert response.json()["name"] == "John Doe"
+
+    # Test update person
+    person = {"name": "  john doe  ", "new_name": "  jane doe  "}
+    response = requests.patch(f"{url}/update", json=person)
+    assert response.status_code == 202
+    assert response.json()["name"] == "Jane Doe"
+
+    # Test delete person
+    person = {"name": "  jane doe  "}
+    response = requests.delete(f"{url}/remove", json=person)
+    assert response.status_code == 200
+    assert response.json() is None
 
 
 if __name__ == "__main__":
-    import doctest
-
-    create_person()
-
-    doctest.testmod()
+    test_person()
