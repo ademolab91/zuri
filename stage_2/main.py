@@ -56,7 +56,7 @@ def parse_name(person: PersonIn | PersonUpdate):
 app = FastAPI()
 
 
-@app.post("/add", status_code=status.HTTP_201_CREATED)
+@app.post("/api/add", status_code=status.HTTP_201_CREATED)
 def add_person(person: PersonIn) -> PersonOut:
     """Add Person"""
 
@@ -67,7 +67,7 @@ def add_person(person: PersonIn) -> PersonOut:
     return person
 
 
-@app.get("/read", status_code=status.HTTP_200_OK)
+@app.get("/api/read", status_code=status.HTTP_200_OK)
 def get_person(person: PersonIn) -> PersonOut:
     """Get a person"""
 
@@ -78,7 +78,7 @@ def get_person(person: PersonIn) -> PersonOut:
     return person
 
 
-@app.patch("/update", status_code=status.HTTP_202_ACCEPTED)
+@app.patch("/api/update", status_code=status.HTTP_202_ACCEPTED)
 def update_person(person: PersonUpdate) -> PersonOut:
     """Update a person"""
 
@@ -92,7 +92,7 @@ def update_person(person: PersonUpdate) -> PersonOut:
     return db_person
 
 
-@app.delete("/remove", status_code=status.HTTP_200_OK)
+@app.delete("/api/remove", status_code=status.HTTP_200_OK)
 def remove_person(person: PersonIn) -> None:
     """Remove a person"""
 
