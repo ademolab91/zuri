@@ -1,4 +1,3 @@
-from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlmodel import create_engine, Session, SQLModel
 
 from models.base_model import AllBaseModel
@@ -45,9 +44,7 @@ class DBStorage:
     def reload(self):
         """Reload all tables in the database and create the current database session"""
         SQLModel.metadata.create_all(self.__engine)
-        sess_factory = sessionmaker(bind=self.__engine, expire_on_commit=False)
-        Session: Session = scoped_session(sess_factory)
-        self.__session = Session
+        self.__session = Session(self.__engine)
 
     def close(self):
         """Close the current database session"""

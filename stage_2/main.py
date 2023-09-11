@@ -1,7 +1,7 @@
+from __future__ import annotations
+
 from fastapi import FastAPI, status, HTTPException
-from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-import string
 
 import models
 from models.person import Person
@@ -56,17 +56,18 @@ def parse_name(person: PersonIn | PersonUpdate):
 app = FastAPI()
 
 
-@app.post("/add")
+@app.post("/add", status_code=status.HTTP_201_CREATED)
 def add_person(person: PersonIn) -> PersonOut:
     """Add Person"""
 
     person = parse_name(person)
     person: Person = Person(name=person.name)
     person.save()
+    print(person)
     return person
 
 
-@app.get("/read")
+@app.get("/read", status_code=status.HTTP_200_OK)
 def get_person(person: PersonIn) -> PersonOut:
     """Get a person"""
 
@@ -77,7 +78,7 @@ def get_person(person: PersonIn) -> PersonOut:
     return person
 
 
-@app.patch("/update")
+@app.patch("/update", status_code=status.HTTP_202_ACCEPTED)
 def update_person(person: PersonUpdate) -> PersonOut:
     """Update a person"""
 
@@ -87,11 +88,12 @@ def update_person(person: PersonUpdate) -> PersonOut:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
     db_person.name = person.new_name
     db_person.save()
+    print(db_person)
     return db_person
 
 
-@app.delete("/remove")
-def remove_person(person: PersonIn) -> PersonOut:
+@app.delete("/remove", status_code=status.HTTP_200_OK)
+def remove_person(person: PersonIn) -> None:
     """Remove a person"""
 
     person = parse_name(person)
@@ -99,4 +101,4 @@ def remove_person(person: PersonIn) -> PersonOut:
     if not db_person:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
     db_person.delete()
-    return JSONResponse(status.HTTP_204_NO_CONTENT)
+    return None
