@@ -13,4 +13,4 @@ Make sure you have [https://python-poetry.org](poetry) installed before going on
 
 ## Usage
 
-See [](DOCUMENTATION.md)
+See [https://github.com/ademolab91/zuri/blob/main/stage_2/DOCUMENTATION.md](DOCUMENTATION.md)
