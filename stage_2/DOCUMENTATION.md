@@ -1,5 +1,9 @@
 # DOCUMENTATION
 
+## UML Diagram
+
+See [https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view](here)
+
 ## Format
 
 - POST `/add` - Endpoint for adding a user to the database
