@@ -29,12 +29,12 @@
     "id": "12hdfjksj-fajs76jev3-hdjs7-ysjosowu"
     "name": "Kram Neisse"
     }
-  - response status code: 200
+  - response status code: 202
 - DELETE `/remove` - Endpoint for removing a user from the database
   - body: {
     "name": "Kram Neisse"
     }
-  - response status code: 204
+  - response status code: 200
 
 ## Setup Instructions
 
