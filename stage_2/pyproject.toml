@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "stage-2"
+version = "0.1.0"
+description = ""
+authors = ["Ademola Balogun <balotech514@gmail.com>"]
+readme = "README.md"
+packages = [{include = "stage_2"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlmodel = "^0.0.8"
+fastapi = "^0.103.1"
+pydantic = "<=2.0.0"
+uvicorn = "^0.23.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
