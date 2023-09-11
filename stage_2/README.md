@@ -4,7 +4,7 @@ A simple REST API capable of CRUD operations on a resource, say in this case, a 
 
 Use the service here: [https://stage-2.onrender.com/docs#/](https://stage-2.onrender.com/docs#/)
 
-See the [https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view?usp=drivesdk]("UML-Diagram")
+See the [https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view?usp=drivesdk]("UML Diagram")
 
 ## Setup Instructions
 
