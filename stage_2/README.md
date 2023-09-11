@@ -2,6 +2,8 @@
 
 A simple REST API capable of CRUD operations on a resource, say in this case, a "person".
 
+See the [https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view?usp=drivesdk](UML Diagram)
+
 ## Setup Instructions
 
 Make sure you have [https://python-poetry.org](poetry) installed before going on!
