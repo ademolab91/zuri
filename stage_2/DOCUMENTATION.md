@@ -2,7 +2,7 @@
 
 ## UML Diagram
 
-See [https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view?usp=drivesdk](here)
+See [here](https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view?usp=drivesdk)
 
 ## Format
 
@@ -42,7 +42,7 @@ See [https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view?usp=
 
 ## Setup Instructions
 
-Make sure you have [https://python-poetry.org](poetry) installed before going on!
+Make sure you have [poetry](https://python-poetry.org) installed before going on!
 
 1. `git clone https://github.com/ademolab91/stage_2`
 2. Chande directory `cd stage_2`

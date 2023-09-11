@@ -4,11 +4,11 @@ A simple REST API capable of CRUD operations on a resource, say in this case, a 
 
 Use the service here: [https://stage-2.onrender.com/docs#/](https://stage-2.onrender.com/docs#/)
 
-See the [https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view?usp=drivesdk]("UML Diagram")
+See the [UML Diagram](https://drive.google.com/file/d/15rEQLyQyFp440u-oL7wEfS-FanfdY0Yd/view?usp=drivesdk)
 
 ## Setup Instructions
 
-Make sure you have [https://python-poetry.org](poetry) installed before going on!
+Make sure you have [poetry](https://python-poetry.org) installed before going on!
 
 1. `git clone https://github.com/ademolab91/stage_2`
 2. Change directory `cd stage_2`
@@ -17,7 +17,7 @@ Make sure you have [https://python-poetry.org](poetry) installed before going on
 
 ## Usage
 
-See [https://github.com/ademolab91/zuri/blob/main/stage_2/DOCUMENTATION.md]("DOCUMENTATION.md")
+See [DOCUMENTATION.md](https://github.com/ademolab91/zuri/blob/main/stage_2/DOCUMENTATION.md)
 
 ## Testing
 
